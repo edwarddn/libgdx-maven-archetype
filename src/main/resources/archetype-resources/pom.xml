@@ -9,10 +9,12 @@
 	<name>\${JavaGameClassName} Parent</name>
 
 	<properties>
-		<android.version>4.1.1.4</android.version>
-		<android.maven.version>3.8.1</android.maven.version>
-		<gwt.version>2.6.0</gwt.version>
-		<gwt.maven.version>2.6.0</gwt.maven.version>
+		<java.version>11</java.version>
+		<maven.compiler.source>${java.version}</maven.compiler.source>
+		<maven.compiler.target>${java.version}</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+		<gdx.version>1.9.10</gdx.version>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
@@ -111,10 +113,10 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.5.1</version>
+				<version>3.8.1</version>
 				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
+					<source>${maven.compiler.source}</source>
+					<target>${maven.compiler.target}</target>
 				</configuration>
 			</plugin>
 		</plugins>
